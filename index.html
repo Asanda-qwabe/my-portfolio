@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Asanda Qwabe, a passionate software developer with expertise in Java, Python, C#, and web development.">
+    <meta name="keywords" content="Software Developer, Portfolio, Java, Python, C#, Web Development, AI, Full Stack">
+    <meta name="author" content="Asanda Qwabe">
+    <title>Asanda Qwabe - Software Developer Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <nav class="nav-container">
+        <div class="logo">AQ.dev</div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#certifications" class="nav-link">Certifications</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class='bx bx-moon'></i>
+            </button>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class='bx bx-menu'></i>
+            </button>
+        </div>
+    </nav>
+        
+
+    <!-- Mobile_menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#home" class="nav-link" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="#about" class="nav-link" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="#projects" class="nav-link" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="#education" class="nav-link" onclick="closeMobileMenu()">Education</a></li>
+            <li><a href="#certifications" class="nav-link" onclick="closeMobileMenu()">Certifications</a></li>
+            <li><a href="#skills" class="nav-link" onclick="closeMobileMenu()">Skills</a></li>
+            <li><a href="#contact" class="nav-link" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+
+<!-- Hero_section -->
+<section id="home" class="hero">
+    <div class="hero-container">
+        <div class="hero-content" data-aos="fade-right">
+            <h1>Hi, I'm <span class="highlight">Asanda Qwabe</span></h1>
+            <div class="hero-subtitle">
+                <span id="typed-text"></span>
+            </div>
+            <p class="hero-description">
+                Passionate software developer crafting innovative solutions with cutting-edge technologies. 
+                Specializing in full-stack development, AI integration, and quality assurance to build 
+                impactful digital experiences.
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class='bx bx-code-alt'></i>
+                    View My Work
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class='bx bx-message-dots'></i>
+                    Let's Connect
+                </a>
+            </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left">
+            <img src="images/Asanda_graduation_image.jpg"   width='350' height='350' alt="About Asanda" class="hero-avatar" >
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/asanda-qwabe-61007424b" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://github.com/asanda-qwabe" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="mailto:asandangcamu02@gmail.com" class="social-link">
+                    <i class='bx bx-envelope'></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- About_section -->
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Driven by curiosity and passion for technology
+        </p>
+        <div class="about-grid">
+            <div data-aos="fade-right">
+                <img src="images/Asanda Qwabe_Glass.jpg"   width='400' height='300' alt="About me illustration" class="about-image"> 
+            </div>
+            <div class="about-content" data-aos="fade-left">
+                <h3>Passionate Software Developer</h3>
+                <p>
+                    I'm a driven software developer and recent WeThinkCode_ graduate (2024) with expertise in multiple programming languages 
+                    and frameworks. My journey in technology is fueled by curiosity and a commitment to creating solutions that make a difference.
+                </p>
+                <p>
+                    Specializing in full-stack development, AI integration, and quality assurance, I bring a unique blend of technical 
+                    skills and collaborative spirit to every project. I thrive in environments that challenge me to learn, grow, and 
+                    contribute to meaningful innovations.
+                </p>
+                <p>
+                    When I'm not coding, you'll find me exploring the latest in cloud computing, DevOps practices, and emerging 
+                    technologies that shape the future of software development.
+                </p>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat" data-aos="fade-up" data-aos-delay="200">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Projects </span>
+            </div>
+            <div class="stat" data-aos="fade-up" data-aos-delay="300">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Technologies Mastered</span>
+            </div>
+            <div class="stat" data-aos="fade-up" data-aos-delay="400">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Commitment to Quality</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Projects_section -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Showcasing innovative solutions built with modern technologies
+        </p>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-icon">
+                    <i class='bx bx-home-alt'></i>
+                </div>
+                <h3 class="project-title">HomeAccess App</h3>
+                <p class="project-description">
+                    A comprehensive tenant management platform featuring visitor pin generation, real-time community chat, 
+                    and seamless rental experience management. Built with modern web technologies for optimal user experience.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Full Stack</span>
+                    <span class="tech-tag">Real-time Chat</span>
+                    <span class="tech-tag">User Management</span>
+                    <span class="tech-tag">Security</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <i class='bx bx-link-external'></i>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class='bx bxl-github'></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-icon">
+                    <i class='bx bx-brain'></i>
+                </div>
+                <h3 class="project-title">Smart-Task-Manager</h3>
+                <p class="project-description">
+                    An AI-powered Smart Task Manager that helps users create, organize, and track tasks. 
+                    Features include deadlines, priorities, categories, analytics, and smart AI productivity tips 
+                    for better time management and efficiency.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python (Flask)</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">OpenAI API</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <i class='bx bx-link-external'></i>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class='bx bxl-github'></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-icon">
+                    <i class='bx bx-face'></i>
+                </div>
+                <h3 class="project-title">Secure Face Wallet</h3>
+                <p class="project-description">
+                    Revolutionary ATM solution using facial recognition technology for secure emergency cash withdrawals. 
+                    Implements advanced biometric authentication with multi-layer security protocols.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Face Recognition</span>
+                    <span class="tech-tag">Security</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <i class='bx bx-link-external'></i>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class='bx bxl-github'></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-icon">
+                    <i class='bx bx-game'></i>
+                </div>
+                <h3 class="project-title">XO Game Hub</h3>
+                <p class="project-description">
+                    Interactive web-based Tic-Tac-Toe game built with Flask, featuring AI opponent with multiple difficulty levels, 
+                    responsive design, and engaging user interface for seamless gameplay experience.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Game Logic</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <i class='bx bx-link-external'></i>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class='bx bxl-github'></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-icon">
+                    <i class='bx bx-plus-medical'></i>
+                </div>
+                <h3 class="project-title">Clinic Support System</h3>
+                <p class="project-description">
+                    Comprehensive healthcare management solution streamlining patient records, appointment scheduling, 
+                    and medical data management. Built with focus on security, efficiency, and user experience.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">.NET</span>
+                    <span class="tech-tag">Database</span>
+                    <span class="tech-tag">Healthcare</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <i class='bx bx-link-external'></i>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class='bx bxl-github'></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                <div class="project-icon">
+                    <i class='bx bx-code-block'></i>
+                </div>
+                <h3 class="project-title">FixMy Community</h3>
+                <p class="project-description">
+                    FixMyWard is a community-driven platform that lets citizens report municipal issues like leaking pipes,
+                    potholes, sewage, and streetlights with photos and geolocation. It features progress tracking,
+                    duplicate report merging, emergency requests (Police, Fire, Ambulance), and real-time municipal announcements to improve transparency and accountability.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">SQLite/Firebase</span>
+                    <span class="tech-tag">REST API</span>
+                    <span class="tech-tag">Geolocation</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <i class='bx bx-link-external'></i>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class='bx bxl-github'></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="education" class="section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Education</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Building strong foundations through intensive learning and practical experience
+        </p>
+        <div class="education-grid">
+            <div class="education-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="education-icon">
+                    <i class='bx bx-code-block'></i>
+                </div>
+                <div class="education-content">
+                    <h3 class="education-title">WeThinkCode_</h3>
+                    <div class="education-degree">Software Engineering Program</div>
+                    <div class="education-date">2022 - 2024</div>
+                    <div class="education-location">South Africa</div>
+                    <p class="education-description">
+                        Graduated from an intensive software engineering program specializing in 
+                        project-based, peer-to-peer learning. Built strong expertise in programming, 
+                        software development methodologies, and collaborative problem-solving aligned 
+                        with industry needs.
+                    </p>
+                    <div class="education-highlights">
+                        <div class="highlight-item">
+                            <i class='bx bx-check'></i>
+                            <span>Peer-to-peer learning methodology</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class='bx bx-check'></i>
+                            <span>Project-based curriculum</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class='bx bx-check'></i>
+                            <span>Industry-relevant skills development</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class='bx bx-check'></i>
+                            <span>Collaborative software development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Certifications</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Continuous learning through professional certifications and specialized training
+            </p>
+
+            <div class="certifications-grid">
+                <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certification-header">
+                        <div class="certification-icon">
+                            <i class='bx bx-code-alt'></i>
+                        </div>
+                        <div class="certification-badge">
+                            <span class="badge-text">VERIFIED</span>
+                        </div>
+                    </div>
+
+                    <div class="certification-content">
+                        <h3 class="certification-title">Software Engineering Job Simulation</h3>
+                        <div class="certification-issuer">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%2300d4ff' rx='8'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Inter' font-size='16' font-weight='bold' fill='white'%3EF%3C/text%3E%3C/svg%3E" alt="Forage" class="issuer-logo">
+                            <span>Forage</span>
+                        </div>
+                        <div class="certification-date">August 2025</div>
+                        <p class="certification-description">
+                            Completed comprehensive practical tasks covering Coding, Research, Concept Demonstration, 
+                            and working in Agile environment during simulation period.
+                        </p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">Coding</span>
+                            <span class="skill-badge">Research</span>
+                            <span class="skill-badge">Concept Demonstration</span>
+                            <span class="skill-badge">Understanding the Brief</span>
+                            <span class="skill-badge">Agile Environment</span>
+                        </div>
+                        <div class="certification-verification">
+                            <div class="verification-codes">
+                                <small>
+                                    <strong>Enrollment:</strong> August<br>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="certifications-grid">
+                <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certification-header">
+                        <div class="certification-icon">
+                            <i class='bx bx-code-alt'></i>
+                        </div>
+                        <div class="certification-badge">
+                            <span class="badge-text">VERIFIED</span>
+                        </div>
+                    </div>
+
+                    <div class="certification-content">
+                        <h3 class="certification-title">Cloud Platform Job Simulation</h3>
+                        <div class="certification-issuer">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%2300d4ff' rx='8'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Inter' font-size='16' font-weight='bold' fill='white'%3EF%3C/text%3E%3C/svg%3E" alt="Forage" class="issuer-logo">
+                            <span>Forage</span>
+                        </div>
+                        <div class="certification-date">June 2025</div>
+                        <p class="certification-description">
+                            Completed comprehensive practical tasks covering Architecture, Security, Programming, 
+                            Testing, and Agile methodologies during June simulation period.
+                        </p>
+                        <div class="certification-skills">
+                            <span class="skill-badge">Architecture</span>
+                            <span class="skill-badge">Security</span>
+                            <span class="skill-badge">Programming</span>
+                            <span class="skill-badge">Testing</span>
+                            <span class="skill-badge">Agile</span>
+                        </div>
+                        <div class="certification-verification">
+                            <div class="verification-codes">
+                                <small>
+                                    <strong>Enrollment:</strong> June<br>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Proficient in modern technologies and development practices
+            </p>
+            <div class="skills-container">
+                <div class="skills-categories">
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Programming Languages</h3>
+                        <div class="skills-list">
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">Java</span>
+                            <span class="skill-item">C#</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="skills-list">
+                            <span class="skill-item">.NET</span>
+                            <span class="skill-item">Flask</span>
+                            <span class="skill-item">Selenium</span>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Tools & Technologies</h3>
+                        <div class="skills-list">
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">GitHub</span>
+                            <span class="skill-item">GitLab</span>
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">SQLite</span>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                        <h3>AI & Development Practices</h3>
+                        <div class="skills-list">
+                            <span class="skill-item">TDD</span>
+                            <span class="skill-item">API Testing</span>
+                            <span class="skill-item">Automation</span>
+                            <span class="skill-item">DevOps</span>
+                            <span class="skill-item">Agile</span>
+                        </div>
+                    </div>
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                        <h3>Soft Skills</h3>
+                        <div class="skills-list">
+                            <span class="skill-item">Problem Solving</span>
+                            <span class="skill-item">Team Collaboration</span>
+                            <span class="skill-item">Communication</span>
+                            <span class="skill-item">Leadership</span>
+                            <span class="skill-item">Critical Thinking</span>
+                            <span class="skill-item">Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Let's Connect</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Ready to collaborate on your next project? Let's discuss how we can work together
+            </p>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Get In Touch</h3>
+                    <p>
+                        I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology. 
+                        Whether you're looking for a developer, have a project in mind, or want to connect, feel free to reach out!
+                    </p>
+                    <div class="contact-item">
+                        <i class='bx bx-envelope'></i>
+                        <span>asandangcamu@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class='bx bx-map'></i>
+                        <span>KZN, Durban, South Africa</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class='bx bx-time'></i>
+                        <span>Available for work</span>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Tell me about your project or just say hello!"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class='bx bx-send'></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant -->
+    <div class="ai-assistant">
+        <button class="ai-toggle" onclick="toggleAI()">
+            <i class='bx bx-bot'></i>
+        </button>
+        <div class="ai-chat" id="ai-chat">
+            <div class="ai-header">
+                <div class="ai-avatar">
+                    <i class='bx bx-bot'></i>
+                </div>
+                <div>
+                    <h4>AI Assistant</h4>
+                    <p style="font-size: 1.2rem; color: var(--text-muted);">Ask me about Asanda's skills</p>
+                </div>
+            </div>
+            <div class="ai-messages" id="ai-messages">
+                <div class="ai-message bot">
+                    Hi! I'm Asanda's AI assistant. I can help you learn more about his skills, projects, experience, education, and certifications. What would you like to know?
+                </div>
+            </div>
+            <div class="ai-input">
+                <input type="text" id="ai-input" placeholder="Ask me anything..." onkeypress="handleAIInput(event)">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home" class="footer-link">Home</a>
+                <a href="#about" class="footer-link">About</a>
+                <a href="#projects" class="footer-link">Projects</a>
+                <a href="#education" class="footer-link">Education</a>
+                <a href="#certifications" class="footer-link">Certifications</a>
+                <a href="#skills" class="footer-link">Skills</a>
+                <a href="#contact" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/asanda-qwabe" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://github.com/asanda-qwabe" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="mailto:asandangcamu@gmail.com">
+                    <i class='bx bx-envelope'></i>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Asanda Qwabe. All rights reserved. Built with passion and modern web technologies.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
