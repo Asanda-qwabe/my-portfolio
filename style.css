@@ -163,6 +163,18 @@ body.light-theme .mobile-menu {
 
 .mobile-menu.active {
     display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .mobile-menu ul {
@@ -371,6 +383,15 @@ body.light-theme .mobile-menu {
     gap: 6rem;
     align-items: center;
     margin-top: 6rem;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
 }
 
 .about-content h3 {
@@ -1105,6 +1126,7 @@ body.light-theme .mobile-menu {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 4rem;
+        text-align: center;
     }
 
     .contact-grid {
@@ -1135,6 +1157,10 @@ body.light-theme .mobile-menu {
 
     .nav-container {
         padding: 0 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
@@ -1215,6 +1241,8 @@ body.light-theme .mobile-menu {
 
     .cta-buttons {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .contact-form {
@@ -1247,6 +1275,15 @@ body.light-theme .mobile-menu {
 }
 
 @media (max-width: 600px) {
+    .nav-container {
+        padding: 0 1.5rem;
+        height: 60px;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+
     .ai-assistant {
         bottom: 20px;
         right: 20px;
@@ -1272,6 +1309,10 @@ body.light-theme .mobile-menu {
     .project-links {
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .hero {
+        padding-top: 60px;
     }
 }
 
@@ -1431,6 +1472,26 @@ body.light-theme .mobile-menu {
     }
 }
 
+/* Touch device optimizations */
+@media (hover: none) {
+    .project-card:hover,
+    .certification-card:hover,
+    .skill-category:hover {
+        transform: none;
+        box-shadow: var(--shadow-card);
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+
+    .skill-item:hover {
+        transform: none;
+        background: var(--secondary-bg);
+        color: var(--text-primary);
+    }
+}
+
 /* High contrast mode support */
 @media (prefers-contrast: high) {
     :root {
@@ -1460,4 +1521,37 @@ body.light-theme .mobile-menu {
     .ai-toggle {
         animation: none;
     }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Focus indicators for accessibility */
+*:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--accent-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1001;
+    border-radius: 4px;
+}
+
+.skip-link:focus {
+    top: 6px;
 }

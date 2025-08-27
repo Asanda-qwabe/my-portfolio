@@ -3,7 +3,8 @@
 AOS.init({
     duration: 1000,
     once: true,
-    offset: 100
+    offset: 50,
+    easing: 'ease-out-cubic'
 });
 
 // Typed.js initialization
