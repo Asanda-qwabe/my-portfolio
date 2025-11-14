@@ -1,4 +1,3 @@
-
 // Initialize AOS
 AOS.init({
     duration: 1000,
@@ -213,6 +212,13 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         }, 2000);
     }, 2000);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+        const yearSpan = document.getElementById("current-year");
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
 
 // Click outside to close mobile menu
 document.addEventListener('click', (e) => {

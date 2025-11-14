@@ -6,31 +6,48 @@
     <meta name="description" content="Portfolio of Asanda Qwabe, a passionate software developer with expertise in Java, Python, C#, and web development.">
     <meta name="keywords" content="Software Developer, Portfolio, Java, Python, C#, Web Development, AI, Full Stack">
     <meta name="author" content="Asanda Qwabe">
-    <title>Asanda Qwabe - Software Developer Portfolio</title>
+    <title>Asanda Qwabe | Software Developer Portfolio</title>
+
+    <meta property="og:title" content="Asanda Qwabe | Software Developer Portfolio">
+    <meta property="og:description" content="Passionate software developer crafting innovative solutions with cutting-edge technologies. Specializing in full-stack development, AI integration, and quality assurance.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Asanda-qwabe/my-portfolio/main/images/Asanda%20Qwabe_Glass.jpg"> <!-- Replace with an actual OG image URL -->
+    <meta property="og:url" content="https://asanda-qwabe.github.io/my-portfolio/"> 
+    <meta property="og:type" content="website">
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="script.js">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> 
+    <script src="script.js" defer></script>
+
+
+
 </head>
 <body>
 <!-- Header -->
 <header class="header">
     <nav class="nav-container">
         <div class="logo">AQ.dev</div>
-        <ul class="nav-menu">
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#education" class="nav-link">Education</a></li>
-            <li><a href="#certifications" class="nav-link">Certifications</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+        <ul class="nav-menu" role="menubar">
+            <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
+            <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+            <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+            <li role="none"><a href="#education" class="nav-link" role="menuitem">Education</a></li>
+            <li role="none"><a href="#certifications" class="nav-link" role="menuitem">Certifications</a></li>
+            <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+            <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+            <li role="none"><a href="link-to-your-resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link btn btn-secondary download-cv" role="menuitem">Resume <i class='bx bx-download'></i></a></li>
         </ul>
         <div style="display: flex; align-items: center; gap: 1rem;">
-            <button class="theme-toggle" onclick="toggleTheme()">
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Switch to light theme" aria-live="polite">
                 <i class='bx bx-moon'></i>
             </button>
-            <button class="nav-toggle" onclick="toggleMobileMenu()">
+            <button class="nav-toggle" onclick="toggleMobileMenu()" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
                 <i class='bx bx-menu'></i>
             </button>
         </div>
@@ -38,15 +55,16 @@
         
 
     <!-- Mobile_menu -->
-    <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
         <ul>
-            <li><a href="#home" class="nav-link" onclick="closeMobileMenu()">Home</a></li>
-            <li><a href="#about" class="nav-link" onclick="closeMobileMenu()">About</a></li>
-            <li><a href="#projects" class="nav-link" onclick="closeMobileMenu()">Projects</a></li>
-            <li><a href="#education" class="nav-link" onclick="closeMobileMenu()">Education</a></li>
-            <li><a href="#certifications" class="nav-link" onclick="closeMobileMenu()">Certifications</a></li>
-            <li><a href="#skills" class="nav-link" onclick="closeMobileMenu()">Skills</a></li>
-            <li><a href="#contact" class="nav-link" onclick="closeMobileMenu()">Contact</a></li>
+            <li role="none"><a href="#home" class="nav-link" onclick="closeMobileMenu()" role="menuitem">Home</a></li>
+            <li role="none"><a href="#about" class="nav-link" onclick="closeMobileMenu()" role="menuitem">About</a></li>
+            <li role="none"><a href="#projects" class="nav-link" onclick="closeMobileMenu()" role="menuitem">Projects</a></li>
+            <li role="none"><a href="#education" class="nav-link" onclick="closeMobileMenu()" role="menuitem">Education</a></li>
+            <li role="none"><a href="#certifications" class="nav-link" onclick="closeMobileMenu()" role="menuitem">Certifications</a></li>
+            <li role="none"><a href="#skills" class="nav-link" onclick="closeMobileMenu()" role="menuitem">Skills</a></li>
+            <li role="none"><a href="#contact" class="nav-link" onclick="closeMobileMenu()" role="menuitem">Contact</a></li>
+            <li role="none"><a href="link-to-your-resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link btn btn-secondary download-cv" onclick="closeMobileMenu()" role="menuitem">Resume <i class='bx bx-download'></i></a></li>
         </ul>
     </div>
 </header>
@@ -66,18 +84,23 @@
                 impactful digital experiences.
             </p>
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">
+                <a href="#projects" class="btn btn-primary" role="button">
                     <i class='bx bx-code-alt'></i>
                     View My Work
                 </a>
-                <a href="#contact" class="btn btn-secondary">
+                <a href="#contact" class="btn btn-secondary" role="button">
                     <i class='bx bx-message-dots'></i>
                     Let's Connect
                 </a>
             </div>
         </div>
         <div class="hero-image" data-aos="fade-left">
-            <img src="images/Asanda_graduation_image.jpg"   width='350' height='350' alt="About Asanda" class="hero-avatar" loading="lazy" decoding="async" >
+            <picture>
+                <source srcset="images/Asanda_graduation_image_large.jpg" media="(min-width: 1200px)"> 
+                <source srcset="images/Asanda_graduation_image_medium.jpg" media="(min-width: 768px)"> 
+                <img src="images/Asanda_graduation_image.jpg"   width='350' height='350' alt="About Asanda" class="hero-avatar" loading="lazy" decoding="async" >
+            </picture>
+            
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/asanda-qwabe-61007424b" class="social-link" target="_blank" rel="noopener noreferrer">
                     <i class='bx bxl-linkedin'></i>
@@ -103,23 +126,27 @@
         </p>
         <div class="about-grid">
             <div data-aos="fade-right">
+                
                 <img src="images/Asanda Qwabe_Glass.jpg"   width='400' height='300' alt="About me illustration" class="about-image" loading="lazy" decoding="async"> 
             </div>
             <div class="about-content" data-aos="fade-left">
                 <h3>Passionate Software Developer</h3>
                 <p>
-                    I'm a driven software developer and recent WeThinkCode_ graduate (2024) with expertise in multiple programming languages 
-                    and frameworks. My journey in technology is fueled by curiosity and a commitment to creating solutions that make a difference.
+                    I'm a driven software developer and recent WeThinkCode_ graduate (2024) with expertise in multiple programming languages and frameworks.
+                    My journey in technology is fueled by curiosity and a commitment to creating solutions that make a difference.
                 </p>
                 <p>
-                    Specializing in full-stack development, AI integration, and quality assurance, I bring a unique blend of technical 
-                    skills and collaborative spirit to every project. I thrive in environments that challenge me to learn, grow, and 
-                    contribute to meaningful innovations.
+                    Specializing in full-stack development, AI integration, and quality assurance,
+                    I bring a unique blend of technical skills and a strong collaborative spirit to every project.
+                    I am genuinely eager to learn and thrive in environments that challenge me to grow quickly and contribute meaningfully to team innovations.
                 </p>
                 <p>
-                    When I'm not coding, you'll find me exploring the latest in cloud computing, DevOps practices, and emerging 
-                    technologies that shape the future of software development.
+                    When I'm not coding, you'll find me exploring the latest in Generative AI, cloud computing, DevOps practices,
+                    and emerging technologies that shape the future of software development, demonstrating my dedication to continuous upskilling.
                 </p>
+                <a href="link-to-your-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-4" aria-label="Download Asanda Qwabe's Resume">
+                    <i class='bx bx-download'></i> Download My Resume
+                </a>
             </div>
         </div>
         <div class="stats">
@@ -372,15 +399,15 @@
 </section>
 
     
-<section id="certifications" class="section">
+<section id="certifications" class="section" aria-labelledby="certifications-title">
     <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Certifications</h2>
+        <h2 class="section-title" id="certifications-title" data-aos="fade-up">Certifications</h2>
         <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
             Continuous learning through professional certifications and specialized training
         </p>
 
         <div class="certifications-grid">
-            <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
+            <article class="certification-card" data-aos="fade-up" data-aos-delay="200" aria-labelledby="software-eng-sim-title">
                 <div class="certification-header">
                     <div class="certification-icon">
                         <i class='bx bx-code-alt'></i>
@@ -391,14 +418,14 @@
                 </div>
 
                 <div class="certification-content">
-                    <h3 class="certification-title">Software Engineering Job Simulation</h3>
+                    <h3 class="certification-title" id="software-eng-sim-title">Software Engineering Job Simulation</h3>
                     <div class="certification-issuer">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%2300d4ff' rx='8'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Inter' font-size='16' font-weight='bold' fill='white'%3EF%3C/text%3E%3C/svg%3E" alt="Forage" class="issuer-logo">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%2300d4ff' rx='8'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Inter' font-size='16' font-weight='bold' fill='white'%3EF%3C/text%3E%3C/svg%3E" alt="Forage logo" class="issuer-logo">
                         <span>Forage</span>
                     </div>
                     <div class="certification-date">August 2025</div>
                     <p class="certification-description">
-                        Completed comprehensive practical tasks covering Coding, Research, Concept Demonstration, 
+                        Completed comprehensive practical tasks covering Coding, Research, Concept Demonstration,
                         and working in Agile environment during simulation period.
                     </p>
                     <div class="certification-skills">
@@ -416,12 +443,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
 
-
-        <div class="certifications-grid">
-            <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
+            <article class="certification-card" data-aos="fade-up" data-aos-delay="200" aria-labelledby="cloud-platform-sim-title">
                 <div class="certification-header">
                     <div class="certification-icon">
                         <i class='bx bx-code-alt'></i>
@@ -432,14 +456,14 @@
                 </div>
 
                 <div class="certification-content">
-                    <h3 class="certification-title">Cloud Platform Job Simulation</h3>
+                    <h3 class="certification-title" id="cloud-platform-sim-title">Cloud Platform Job Simulation</h3>
                     <div class="certification-issuer">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%2300d4ff' rx='8'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Inter' font-size='16' font-weight='bold' fill='white'%3EF%3C/text%3E%3C/svg%3E" alt="Forage" class="issuer-logo">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%2300d4ff' rx='8'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Inter' font-size='16' font-weight='bold' fill='white'%3EF%3C/text%3E%3C/svg%3E" alt="Forage logo" class="issuer-logo">
                         <span>Forage</span>
                     </div>
                     <div class="certification-date">June 2025</div>
                     <p class="certification-description">
-                        Completed comprehensive practical tasks covering Architecture, Security, Programming, 
+                        Completed comprehensive practical tasks covering Architecture, Security, Programming,
                         Testing, and Agile methodologies during June simulation period.
                     </p>
                     <div class="certification-skills">
@@ -457,7 +481,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
     </div>
 </section>
@@ -543,7 +567,7 @@
                 </p>
                 <div class="contact-item">
                     <i class='bx bx-envelope'></i>
-                    <span>asandangcamu@gmail.com</span>
+                    <span>asandangcamu02@gmail.com</span>
                 </div>
                 <div class="contact-item">
                     <i class='bx bx-map'></i>
@@ -555,22 +579,22 @@
                 </div>
             </div>
             <div class="contact-form" data-aos="fade-left">
-                <form id="contact-form">
+                <form id="contact-form" method="POST" data-netlify="true">
                     <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name">Full Name<span class="required-asterisk">*</span></label>
+                        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email Address<span class="required-asterisk">*</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true" placeholder="e.g asandangcamu@gmail.com">
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject<span class="required-asterisk">*</span></label>
+                        <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Project Inquiry, Hello, etc.">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="Tell me about your project or just say hello!"></textarea>
+                        <label for="message">Message<span class="required-asterisk">*</span></label>
+                        <textarea id="message" name="message" required aria-required="true" placeholder="Tell me about your project or just say hello!"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">
                         <i class='bx bx-send'></i>
@@ -622,10 +646,10 @@
                 <a href="#contact" class="footer-link">Contact</a>
             </div>
             <div class="footer-social">
-                <a href="https://linkedin.com/in/asanda-qwabe" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/asanda-qwabe" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                     <i class='bx bxl-linkedin'></i>
                 </a>
-                <a href="https://github.com/asanda-qwabe" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/asanda-qwabe" target="_blank" rel="noopener noreferrer"  aria-label="GitHub Profile">
                     <i class='bx bxl-github'></i>
                 </a>
                 <a href="mailto:asandangcamu@gmail.com">
@@ -638,8 +662,8 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
