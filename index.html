@@ -193,9 +193,8 @@
                     <span class="tech-tag">Security</span>
                 </div>
                 <div class="project-links">
-                    <a href="#" class="project-link">
-                        <i class='bx bx-link-external'></i>
-                        Live Demo
+                    <a href="javascript:void(0)" class="project-link" onclick="openModal('modal-homeaccess')">
+                        <i class='bx bx-link-external'></i> Read More
                     </a>
                     <a href="#" class="project-link">
                         <i class='bx bxl-github'></i>
@@ -223,9 +222,8 @@
                     <span class="tech-tag">OpenAI API</span>
                 </div>
                 <div class="project-links">
-                    <a href="#" class="project-link">
-                        <i class='bx bx-link-external'></i>
-                        Live Demo
+                    <a href="javascript:void(0)" class="project-link" onclick="openModal('modal-smarttask')">
+                        <i class='bx bx-link-external'></i> Read More
                     </a>
                     <a href="#" class="project-link">
                         <i class='bx bxl-github'></i>
@@ -251,9 +249,8 @@
                     <span class="tech-tag">Computer Vision</span>
                 </div>
                 <div class="project-links">
-                    <a href="#" class="project-link">
-                        <i class='bx bx-link-external'></i>
-                        Live Demo
+                    <a href="javascript:void(0)" class="project-link" onclick="openModal('modal-facewallet')">
+                        <i class='bx bx-link-external'></i> Read More
                     </a>
                     <a href="#" class="project-link">
                         <i class='bx bxl-github'></i>
@@ -279,9 +276,8 @@
                     <span class="tech-tag">Game Logic</span>
                 </div>
                 <div class="project-links">
-                    <a href="#" class="project-link">
-                        <i class='bx bx-link-external'></i>
-                        Live Demo
+                    <a href="javascript:void(0)" class="project-link" onclick="openModal('modal-xo-game')">
+                        <i class='bx bx-link-external'></i> Read More
                     </a>
                     <a href="#" class="project-link">
                         <i class='bx bxl-github'></i>
@@ -307,9 +303,8 @@
                     <span class="tech-tag">Healthcare</span>
                 </div>
                 <div class="project-links">
-                    <a href="#" class="project-link">
-                        <i class='bx bx-link-external'></i>
-                        Live Demo
+                    <a href="javascript:void(0)" class="project-link" onclick="openModal('modal-clinic-support')">
+                        <i class='bx bx-link-external'></i> Read More
                     </a>
                     <a href="#" class="project-link">
                         <i class='bx bxl-github'></i>
@@ -339,9 +334,8 @@
                     <span class="tech-tag">Geolocation</span>
                 </div>
                 <div class="project-links">
-                    <a href="#" class="project-link">
-                        <i class='bx bx-link-external'></i>
-                        Live Demo
+                    <a href="javascript:void(0)" class="project-link" onclick="openModal('modal-fixmy-community')">
+                        <i class='bx bx-link-external'></i> Read More
                     </a>
                     <a href="#" class="project-link">
                         <i class='bx bxl-github'></i>
@@ -407,8 +401,45 @@
         <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
             Continuous learning through professional certifications and specialized training
         </p>
-
+        
         <div class="certifications-grid">
+            
+            <article class="certification-card" data-aos="fade-up" data-aos-delay="300" aria-labelledby="genai-course-title">
+            <div class="certification-header">
+                <div class="certification-icon">
+                    <i class='bx bx-bot'></i>
+                </div>
+                <div class="certification-badge">
+                    <span class="badge-text">COMPLETED</span>
+                </div>
+            </div>
+
+                <div class="certification-content">
+                    <h3 class="certification-title" id="genai-course-title">GenAI Course for Software Engineers</h3>
+                    <div class="certification-issuer">
+                        <img src="https://www.wethinkcode.co.za/favicon.ico" alt="WeThinkCode_ logo" class="issuer-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 40 40\'%3E%3Crect width=\'40\' height=\'40\' fill=\'%23000\' rx=\'8\'/%3E%3Ctext x=\'20\' y=\'26\' text-anchor=\'middle\' font-family=\'Inter\' font-size=\'10\' font-weight=\'bold\' fill=\'white\'%3EWTC%3C/text%3E%3C/svg%3E'">
+                        <span>WeThinkCode_</span>
+                    </div>
+                    <div class="certification-date">November 28, 2025</div>
+                    <p class="certification-description">
+                        Advanced training focused on integrating Generative AI tools and LLMs into the software development lifecycle to enhance productivity and code quality.
+                    </p>
+                    <div class="certification-skills">
+                        <span class="skill-badge">Generative AI</span>
+                        <span class="skill-badge">LLM Integration</span>
+                        <span class="skill-badge">Prompt Engineering</span>
+                        <span class="skill-badge">AI Productivity</span>
+                    </div>
+                    <div class="certification-verification">
+                        <div class="verification-codes">
+                            <small>
+                                <strong>Issued by:</strong> Nyari Samushonga (CEO)<br>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
             <article class="certification-card" data-aos="fade-up" data-aos-delay="200" aria-labelledby="software-eng-sim-title">
                 <div class="certification-header">
                     <div class="certification-icon">
@@ -667,5 +698,143 @@
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
+
+    <!-- Modal for projects -->
+
+    <div id="modal-homeaccess" class="project-modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modal-homeaccess')">&times;</span>
+            <h2><i class='bx bx-home-alt'></i> HomeAccess App</h2>
+            <hr>
+            <div class="modal-body">
+                <h3><i class='bx bx-target-lock'></i> What is it solving?</h3>
+                <p>Simplifies complex property management by automating visitor access and fostering community communication.</p>
+                <p>Provides a platform for residents to collaborate on fixing local problems.</p>
+                <p>It helps to get the community involved in solving local issues.</p>
+                
+                <h3><i class='bx bx-wrench'></i> Challenges Faced</h3>
+                <p>Implementing real-time synchronization for the community chat while maintaining low latency was a significant technical hurdle.</p>
+                <p>Ensuring secure generation and validation of visitor pins to prevent unauthorized access.</p>
+                <p>Designing an intuitive user interface that caters to a diverse user base, including non-tech-savvy residents.</p>
+                
+                <h3><i class='bx bx-code-block'></i> Tech Stack</h3>
+                <p>React, Node.js, Firebase, and Socket.io for real-time features.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-smarttask" class="project-modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modal-smarttask')">&times;</span>
+            <h2><i class='bx bx-brain'></i> Smart Task Manager</h2>
+            <hr>
+            <div class="modal-body">
+                <h3><i class='bx bx-target-lock'></i> What is it solving?</h3>
+                <p>Helps users overcome "choice paralysis" by using AI to prioritize tasks based on deadlines and importance.</p>
+                <p>It also reminds the users by their incomplete tasks.</p>
+                <p>Provides actionable productivity tips to enhance time management and efficiency.</p>
+                <p>Offers analytics to help users understand their task management patterns.</p>
+
+                
+                <h3><i class='bx bx-wrench'></i> Challenges Faced</h3>
+                <p>Fine-tuning the OpenAI API prompts to provide actually useful productivity tips rather than generic advice.</p>
+                <p>Implementing a SMS feature for appointment reminders.</p>
+                <p>Designing a user-friendly interface that allows easy task management while integrating AI features seamlessly.</p>
+                
+                <h3><i class='bx bx-code-block'></i> Tech Stack</h3>
+                <p>Python (Flask), SQLite, and OpenAI API integration.</p>
+            </div>
+        </div>
+    </div> 
+
+    <div id="modal-facewallet" class="project-modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modal-facewallet')">&times;</span>
+            <h2><i class='bx bx-face'></i> Secure Face Wallet</h2>
+            <hr>
+            <div class="modal-body">
+                <h3><i class='bx bx-target-lock'></i> What is it solving?</h3>
+                <p>Addresses the need for secure emergency cash access without physical cards through facial recognition technology.</p>
+                <p>Provides a secure and convenient way for users to access emergency cash without physical cards.</p>
+                <p>It also allows users to set up a PIN for additional security.</p>
+                <p>It helps users access emergency funds quickly and securely.</p>
+                
+                <h3><i class='bx bx-wrench'></i> Challenges Faced</h3>
+                <p>Ensuring high accuracy in facial recognition while preventing spoofing attacks was a major challenge.</p>
+                
+                <h3><i class='bx bx-code-block'></i> Tech Stack</h3>
+                <p>Python, OpenCV, and dlib for facial recognition.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-xo-game" class="project-modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modal-xo-game')">&times;</span>
+            <h2><i class='bx bx-game'></i> XO Game Hub</h2>
+            <hr>
+            <div class="modal-body">
+                <h3><i class='bx bx-target-lock'></i> What is it solving?</h3>
+                <p>Offers an engaging way for users to enjoy a classic game with the added challenge of an AI opponent.</p>
+                
+                <h3><i class='bx bx-wrench'></i> Challenges Faced</h3>
+                <p>Designing an AI that could provide a challenging yet fair gameplay experience across multiple difficulty levels.</p>
+                <p>Implementing a responsive UI that works well on various devices and screen sizes.</p>
+                <p>Ensuring smooth game logic and state management to prevent bugs during gameplay.</p>
+                
+                <h3><i class='bx bx-code-block'></i> Tech Stack</h3>
+                <p>Flask, JavaScript, HTML/CSS.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-clinic-support" class="project-modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modal-clinic-support')">&times;</span>
+            <h2><i class='bx bx-plus-medical'></i> Clinic Support System</h2>
+            <hr>
+            <div class="modal-body">
+                <h3><i class='bx bx-target-lock'></i> What is it solving?</h3>
+                <p>Streamlines clinic operations by digitizing patient records and appointment scheduling.</p>
+                <p>Helps the community by reminding patients of upcoming appointments and providing easy access to medical records.</p>
+                <p>Enhances data security and compliance with healthcare regulations.</p>
+                <p>Improves overall efficiency and user experience for both patients and clinic staff.</p>
+
+                
+                <h3><i class='bx bx-wrench'></i> Challenges Faced</h3>
+                <p>Ensuring data security and compliance with healthcare regulations while maintaining usability.</p>
+                <p>Implementing a robust backend system to handle sensitive medical data securely.</p>
+                <p>Implementing secure key management and encryption practices.</p>
+                <p>Implementing a SMS feature for appointment reminders.</p>
+                
+                <h3><i class='bx bx-code-block'></i> Tech Stack</h3>
+                <p>C#, .NET, SQL Server.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-fixmy-community" class="project-modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('modal-fixmy-community')">&times;</span>
+            <h2><i class='bx bx-code-block'></i> FixMy Community</h2>
+            <hr>
+            <div class="modal-body">
+                <h3><i class='bx bx-target-lock'></i> What is it solving?</h3>
+                <p>Empowers citizens to report municipal issues easily, enhancing community engagement and accountability.</p>
+                <p>Help the community by reporting issues like potholes, broken streetlights, or graffiti.</p>
+                <p>Provides a platform for residents to collaborate on fixing local problems.</p>
+                <p>It helps to get the community involved in solving local issues.</p>
+                
+
+                <h3><i class='bx bx-wrench'></i> Challenges Faced</h3>
+                <p>Implementing geolocation features and ensuring reliable photo uploads in low-bandwidth scenarios.</p>
+                
+                <h3><i class='bx bx-code-block'></i> Tech Stack</h3>
+                <p>Python (Flask), JavaScript, SQLite/Firebase, REST API.</p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

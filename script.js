@@ -10,9 +10,9 @@ AOS.init({
 const typed = new Typed('#typed-text', {
     strings: [
         'Software Developer',
+        'Quality Assurance Developer',
         'Full Stack Engineer',
         'AI Enthusiast', 
-        'Quality Assurance Expert',
         'Problem Solver'
     ],
     typeSpeed: 80,
@@ -117,6 +117,25 @@ function toggleTheme() {
         themeIcon.className = 'bx bx-sun';
     } else {
         themeIcon.className = 'bx bx-moon';
+    }
+}
+
+// Modal functionality
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+    document.body.style.overflow = "hidden"; 
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+    document.body.style.overflow = "auto"; 
+}
+
+// Close modal if user clicks outside of the box
+window.onclick = function(event) {
+    if (event.target.className === 'project-modal') {
+        event.target.style.display = "none";
+        document.body.style.overflow = "auto";
     }
 }
 
