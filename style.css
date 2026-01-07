@@ -162,7 +162,8 @@ body.light-theme .header.scrolled {
     width: 100%;
 }
 
-.nav-link.download-cv { /* Styling for the new resume link */
+/* Styling for the new resume link */
+.nav-link.download-cv { 
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
     font-size: 1.4rem;
@@ -183,7 +184,8 @@ body.light-theme .header.scrolled {
     background: rgba(0, 212, 255, 0.05);
 }
 
-.nav-link.download-cv::after { /* Remove the underline for the button style */
+/* Remove the underline for the button style */
+.nav-link.download-cv::after { 
     display: none;
 }
 
@@ -1286,6 +1288,48 @@ body.light-theme .mobile-menu {
 .modal-header h2 { margin-top: 10px; color: #00d4ff; }
 .modal-body section { margin-bottom: 25px; }
 .modal-body h3 { font-size: 1.2rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+
+
+/* Increase Question/Title Font Size */
+.modal-section-title {
+    font-size: 1.4rem; /* Larger than before */
+    color: #00d4ff;    /* Use your brand color */
+    margin-bottom: 12px;
+    margin-top: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+/* Style the bullet points */
+.modal-body ul {
+    list-style: none; /* We will use custom bullets */
+    padding-left: 0;
+}
+
+.modal-body li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Adding a modern bullet point icon */
+.modal-body li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+/* Ensure tech tags look professional inside the modal */
+.tech-stack-modal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
 
 /* ========================================
    CRITICAL MOBILE RESPONSIVE FIXES

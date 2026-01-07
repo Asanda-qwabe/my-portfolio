@@ -1,27 +1,43 @@
-// Initialize AOS
-AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 50,
-    easing: 'ease-out-cubic'
-});
+// Initialize AOS safely
+if (window.AOS && typeof AOS.init === 'function') {
+    try {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 50,
+            easing: 'ease-out-cubic'
+        });
+    } catch (err) {
+        console.error('AOS init failed:', err);
+    }
+} else {
+    console.warn('AOS not available.');
+}
 
-// Typed.js initialization
-const typed = new Typed('#typed-text', {
-    strings: [
-        'Software Developer',
-        'Quality Assurance Developer',
-        'Full Stack Engineer',
-        'AI Enthusiast', 
-        'Problem Solver'
-    ],
-    typeSpeed: 80,
-    backSpeed: 50,
-    backDelay: 2000,
-    loop: true,
-    showCursor: true,
-    cursorChar: '|'
-});
+// Typed.js initialization (guarded)
+if (window.Typed && typeof Typed === 'function') {
+    try {
+        const typed = new Typed('#typed-text', {
+            strings: [
+                'Software Developer',
+                'Quality Assurance Developer',
+                'Full Stack Engineer',
+                'AI Enthusiast', 
+                'Problem Solver'
+            ],
+            typeSpeed: 80,
+            backSpeed: 50,
+            backDelay: 2000,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+    } catch (err) {
+        console.error('Typed.js initialization failed:', err);
+    }
+} else {
+    console.warn('Typed.js not available.');
+}
 
 // Mobile menu functionality
 let mobileMenuOpen = false;
@@ -270,4 +286,3 @@ console.log(`
 ║   Check out the GitHub repo!         ║
 ╚══════════════════════════════════════╝
 `);
-    
