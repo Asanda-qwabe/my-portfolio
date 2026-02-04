@@ -1,42 +1,46 @@
-// Initialize AOS safely
-if (window.AOS && typeof AOS.init === 'function') {
-    try {
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 50,
-            easing: 'ease-out-cubic'
-        });
-    } catch (err) {
-        console.error('AOS init failed:', err);
+// Simple typed text effect (no external dependency)
+function startTypedText() {
+    const target = document.getElementById('typed-text');
+    if (!target) {
+        return;
     }
-} else {
-    console.warn('AOS not available.');
-}
 
-// Typed.js initialization (guarded)
-if (window.Typed && typeof Typed === 'function') {
-    try {
-        const typed = new Typed('#typed-text', {
-            strings: [
-                'Software Developer',
-                'Quality Assurance Developer',
-                'Full Stack Engineer',
-                'AI Enthusiast', 
-                'Problem Solver'
-            ],
-            typeSpeed: 80,
-            backSpeed: 50,
-            backDelay: 2000,
-            loop: true,
-            showCursor: true,
-            cursorChar: '|'
-        });
-    } catch (err) {
-        console.error('Typed.js initialization failed:', err);
-    }
-} else {
-    console.warn('Typed.js not available.');
+    const phrases = [
+        'Software Developer',
+        'Quality Assurance Developer',
+        'Full Stack Engineer',
+        'AI Enthusiast',
+        'Problem Solver'
+    ];
+
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingSpeed = 80;
+    const deletingSpeed = 50;
+    const pauseDelay = 1800;
+
+    const type = () => {
+        const currentPhrase = phrases[phraseIndex];
+        const currentText = currentPhrase.substring(0, charIndex);
+        target.textContent = currentText;
+
+        if (!isDeleting && charIndex < currentPhrase.length) {
+            charIndex += 1;
+            setTimeout(type, typingSpeed);
+        } else if (isDeleting && charIndex > 0) {
+            charIndex -= 1;
+            setTimeout(type, deletingSpeed);
+        } else {
+            isDeleting = !isDeleting;
+            if (!isDeleting) {
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
+            setTimeout(type, pauseDelay);
+        }
+    };
+
+    type();
 }
 
 // Mobile menu functionality
@@ -227,33 +231,26 @@ function generateAIResponse(message) {
     }
 }
 
-// Contact form handling
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Simulate form submission
-    const button = this.querySelector('.btn');
-    const originalText = button.innerHTML;
-    
-    button.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Sending...';
-    button.disabled = true;
-    
-    setTimeout(() => {
-        button.innerHTML = '<i class="bx bx-check"></i> Message Sent!';
-        setTimeout(() => {
-            button.innerHTML = originalText;
-            button.disabled = false;
-            this.reset();
-        }, 2000);
-    }, 2000);
-});
+// Contact form handling (Netlify-friendly)
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function() {
+        const button = this.querySelector('.btn');
+        if (!button) {
+            return;
+        }
+        button.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Sending...';
+        button.disabled = true;
+    });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
-        const yearSpan = document.getElementById("current-year");
-        if (yearSpan) {
-            yearSpan.textContent = new Date().getFullYear();
-        }
-    });
+    const yearSpan = document.getElementById("current-year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+    startTypedText();
+});
 
 // Click outside to close mobile menu
 document.addEventListener('click', (e) => {
